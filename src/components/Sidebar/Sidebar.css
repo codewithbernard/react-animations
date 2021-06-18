@@ -1,0 +1,41 @@
+:root {
+    --sidebar-width: 300px;
+}
+
+aside {
+    /* Style and position the sidebar */
+    width: var(--sidebar-width);
+    position: fixed;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #d1d8e0;
+    box-shadow: 0 0 15px #d1d8e0;
+    left: calc(var(--sidebar-width) * -1);
+    top: 0;
+    bottom: 0;
+
+    /* This will hide the shadow */
+    transform: translateX(-15px);
+
+    /* Animate transform to achieve 60fps */
+    transition: transform .6s ease-in-out;
+}
+
+aside.open {
+    transform: translateX(var(--sidebar-width));
+}
+
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    transition: transform .6s ease-in-out;
+}
+
+.toggle-button.open {
+    transform: translateX(var(--sidebar-width));   
+}
+
+.beers-img {
+    width: 200px;
+}
