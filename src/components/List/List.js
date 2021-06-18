@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Delete from "@material-ui/icons/Delete";
@@ -26,16 +27,18 @@ const List = () => {
       >
         Add Random Item
       </Button>
-      <ul>
+      <TransitionGroup component="ul">
         {items.map((word) => (
-          <li key={word}>
-            <span>{word}</span>
-            <IconButton size="small" data-id={word} onClick={deleteItem}>
-              <Delete />
-            </IconButton>
-          </li>
+          <CSSTransition key={word} timeout={600} classNames="item">
+            <li key={word}>
+              <span>{word}</span>
+              <IconButton size="small" data-id={word} onClick={deleteItem}>
+                <Delete />
+              </IconButton>
+            </li>
+          </CSSTransition>
         ))}
-      </ul>
+      </TransitionGroup>
     </div>
   );
 };

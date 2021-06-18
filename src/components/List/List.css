@@ -9,17 +9,32 @@
     padding: 0;
 }
 
+.list-container ul li button {
+    margin-left: auto;
+}
+
 .list-container ul li {
     display: flex;
     align-items: center;
     margin: 16px 0;
     padding: 4px 16px;
-    box-shadow: 0 0 15px #dedede;
     border: 1px solid #dedede;
     border-radius: 4px;
     text-transform: capitalize;
+    transition: opacity 600ms, transform 600ms;
 }
 
-.list-container ul li button {
-    margin-left: auto;
+.item-enter {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.item-enter-active, .item-enter-done, .item-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item-exit-active {
+    opacity: 0;
+    transform: scale(1) translateY(50px);
 }
