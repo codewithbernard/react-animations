@@ -1,0 +1,64 @@
+.drag-list-container {
+    width: 385px;
+    padding: 24px;
+}
+
+.drag-list-container ul {
+    margin-top: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.drag-list-container ul li button {
+    margin-left: auto;
+}
+
+.drag-list-container ul li {
+    display: flex;
+    align-items: center;
+    padding: 16px 16px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    user-select: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: grab;
+}
+
+.drag-list-container ul li:nth-child(1) {
+    background: #00b09b;
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+    background: linear-gradient(to right, #96c93d, #00b09b);
+}
+
+.drag-list-container ul li:nth-child(2) {
+    background: #D3CCE3;
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+}
+
+.drag-list-container ul li:nth-child(3) {
+    background: #800080;
+    background: -webkit-linear-gradient(to right, #ffc0cb, #800080);
+    background: linear-gradient(to right, #ffc0cb, #800080);
+}
+
+.drag-list-container ul li:nth-child(4) {
+    background: #fc4a1a;
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+
+}
+
+.drag-list-container ul li:nth-child(5) {
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+}
