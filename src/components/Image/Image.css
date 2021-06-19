@@ -1,0 +1,7 @@
+.image-container {
+    padding: 56px 0;
+}
+
+.image-container svg {
+    overflow: visible;
+}
